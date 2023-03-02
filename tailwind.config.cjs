@@ -5,6 +5,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'tablet': '750px',
+    },
     extend: {
       fontFamily: {
         'commissioner': ['Commissioner', 'sans-serif'],

@@ -8,7 +8,7 @@ export default function ProjectPage() {
 const percentFinished = 89914 / 100000 * 100 + '%';
 
   return (
-    <main className = " relative -top-16 mx-auto my-0 w-[90%] -z-[5]">
+    <main className = " relative -top-16 mx-auto my-0 w-[90%] -z-[5] tablet:w-[50%]">
       <div className='flex flex-col bg-white items-center border-[.5px] rounded-lg text-center mb-5'>
         <img src={masterLogo} alt="mastercraft logo" className='relative -top-7 max-w-[56px]' />
         <p className='relative text-base font-bold -top-3'>Mastercraft Bamboo <br /> Monitor Riser</p>
