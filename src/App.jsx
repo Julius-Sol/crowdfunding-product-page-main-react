@@ -5,10 +5,12 @@ import heroMobile from './assets/image-hero-mobile.jpg'
 function App() {
 
   return (
-    <>
-      <Navbar />
-      <img src={heroMobile} alt="mac desktop background image" className='absolute -z-10' />
-    </>
+    <div className='font-commissioner'>
+      <Navbar /> 
+      <div class="inline-block bg-gradient-to-b from-black -z-10">
+        <img src={heroMobile} alt="mac desktop background image" className='relative -z-20' />
+      </div>
+    </div>
   )
 }
 
