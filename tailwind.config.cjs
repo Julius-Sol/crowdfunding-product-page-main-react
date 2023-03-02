@@ -19,6 +19,9 @@ module.exports = {
         'Dark-cyan': 'hsl(176, 72%, 28%)',
         'Dark-gray': 'hsl(0, 0%, 48%)',
       },
+      backgroundImage:{
+        'bookmark-icon':"url('./src/assets/icon-bookmark.svg')"
+      },
     },
   },
   plugins: [],

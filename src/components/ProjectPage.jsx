@@ -1,7 +1,6 @@
 import React from 'react';
 import PledgeCard from './PledgeCard';
-import masterLogo from '../assets/logo-mastercraft.svg'
-import bookmark from '../assets/icon-bookmark.svg'
+import ProjectInfo from './ProjectInfo';
 
 
 export default function ProjectPage() {
@@ -9,18 +8,7 @@ const percentFinished = 89914 / 100000 * 100 + '%';
 
   return (
     <main className = " relative -top-16 mx-auto my-0 w-[90%] -z-[5] tablet:w-[50%]">
-      <div className='flex flex-col bg-white items-center border-[.5px] rounded-lg text-center mb-5'>
-        <img src={masterLogo} alt="mastercraft logo" className='relative -top-7 max-w-[56px]' />
-        <p className='relative text-base font-bold tablet:text-[1.5rem] -top-3'>Mastercraft Bamboo <br className='tablet-xl:hidden' /> Monitor Riser</p>
-        <p className='text-sm text-Dark-gray px-4'>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
-        <div className='flex my-5 mb-8 gap-x-2 tablet:justify-between  tablet:w-[80%] tablet:mx-auto'>
-          <button className='bg-Moderate-cyan hover:bg-Dark-cyan rounded-full px-10 text-white text-sm font-bold'>Back this project</button>
-          <div className='tablet:flex tablet:bg-gray-200 tablet:rounded-full tablet:pr-6'>
-            <img src={bookmark} alt="bookmark" className='max-w-[56px]' />
-            <span className='hidden tablet:block text-center self-center pl-3'>Bookmark</span>
-          </div>
-        </div>
-      </div>
+      <ProjectInfo />
       <div className='flex flex-col bg-white items-center border-[.5px] rounded-lg text-center py-4 mb-5 tablet:items-start tablet-xl:pl-20 tablet:pl-10'>
         <div className='tablet:flex gap-5'>
 
