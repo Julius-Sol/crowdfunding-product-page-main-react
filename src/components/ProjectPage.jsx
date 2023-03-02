@@ -11,7 +11,7 @@ const percentFinished = 89914 / 100000 * 100 + '%';
     <main className = " relative -top-16 mx-auto my-0 w-[90%] -z-[5] tablet:w-[50%]">
       <div className='flex flex-col bg-white items-center border-[.5px] rounded-lg text-center mb-5'>
         <img src={masterLogo} alt="mastercraft logo" className='relative -top-7 max-w-[56px]' />
-        <p className='relative text-base font-bold -top-3'>Mastercraft Bamboo <br /> Monitor Riser</p>
+        <p className='relative text-base font-bold tablet:text-[1.5rem] -top-3'>Mastercraft Bamboo <br className='tablet-xl:hidden' /> Monitor Riser</p>
         <p className='text-sm text-Dark-gray px-4'>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
         <div className='flex my-5 mb-8 gap-x-2 tablet:justify-between  tablet:w-[80%] tablet:mx-auto'>
           <button className='bg-Moderate-cyan hover:bg-Dark-cyan rounded-full px-10 text-white text-sm font-bold'>Back this project</button>

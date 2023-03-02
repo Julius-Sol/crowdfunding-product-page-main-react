@@ -19,7 +19,7 @@ console.log(openNavMenu)
         {openNavMenu? <img src={hamburger} alt="menu icon" className='py-1 tablet:hidden ' onClick={openMenu}/> : <img src={closeIcon} alt="Close Button" className='py-1' onClick={openMenu}/> }
       </div>
       <div className={openNavMenu? 'hidden tablet:block ': 'absolute flex flex-col self-center w-screen border-b-2.1 px-5 top-20'}>
-        <ul className='bg-white rounded-lg tablet:bg-transparent tablet:text-white tablet:flex'>
+        <ul className='bg-white rounded-lg tablet:bg-transparent tablet:text-white tablet:flex font-bold'>
           <li className='border-b-[.12rem] py-5 px-5 tablet:border-b-[0]'><a href="#">About</a></li>
           <li className='border-b-[.12rem] py-5 px-5 tablet:border-b-[0]'><a href="#">Discover</a></li>
           <li className='py-5 px-5'><a href="#">Get Started</a></li>
