@@ -18,7 +18,7 @@ console.log(openNavMenu)
         <img src={logo} alt="logo" />
         {openNavMenu? <img src={hamburger} alt="menu icon" className='py-1' onClick={openMenu}/> : <img src={closeIcon} alt="Close Button" className='py-1' onClick={openMenu}/> }
       </div>
-      <div className={openNavMenu? 'hidden': 'fixed flex flex-col self-center w-screen border-b-2.1 px-5 top-20'}>
+      <div className={openNavMenu? 'hidden': 'absolute flex flex-col self-center w-screen border-b-2.1 px-5 top-20'}>
         <ul className='bg-white rounded-lg'>
           <li className='border-b-[.12rem] py-5 px-5 '><a href="#">About</a></li>
           <li className='border-b-[.12rem] py-5 px-5'><a href="#">Discover</a></li>
