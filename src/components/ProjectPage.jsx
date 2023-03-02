@@ -13,23 +13,35 @@ const percentFinished = 89914 / 100000 * 100 + '%';
         <img src={masterLogo} alt="mastercraft logo" className='relative -top-7 max-w-[56px]' />
         <p className='relative text-base font-bold -top-3'>Mastercraft Bamboo <br /> Monitor Riser</p>
         <p className='text-sm text-Dark-gray px-4'>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
-        <div className='flex my-5 mb-8 gap-x-2'>
+        <div className='flex my-5 mb-8 gap-x-2 tablet:justify-between  tablet:w-[80%] tablet:mx-auto'>
           <button className='bg-Moderate-cyan hover:bg-Dark-cyan rounded-full px-10 text-white text-sm font-bold'>Back this project</button>
-          <img src={bookmark} alt="bookmark" className='max-w-[56px]' />
+          <div className='tablet:flex tablet:bg-gray-200 tablet:rounded-full tablet:pr-6'>
+            <img src={bookmark} alt="bookmark" className='max-w-[56px]' />
+            <span className='hidden tablet:block text-center self-center pl-3'>Bookmark</span>
+          </div>
         </div>
       </div>
-      <div className='flex flex-col bg-white items-center border-[.5px] rounded-lg text-center py-4 mb-5'>
-          <p className='font-bold text-2xl'>$89,914</p>
-          <p className='text-xs text-Dark-gray'>of $100,000 backed</p>
-          <hr className='w-16 border-1 mt-2.5 ' />
-          <p className='font-bold text-2xl mt-2'>5,007</p>
-          <p className='text-xs text-Dark-gray'>total backers</p>
-          <hr className='w-16 border-1 mt-2.5 '/>
-          <p className='font-bold text-2xl mt-2'>56</p>
-          <p className='text-xs text-Dark-gray'>days left</p>
-          <div className='w-[90%] bg-Dark-gray h-3 rounded-full mt-5 mb-3'>
-            <div className='bg-Moderate-cyan h-3 leading-normal rounded-full px-[.2rem]' style={{width : percentFinished }} ></div>
+      <div className='flex flex-col bg-white items-center border-[.5px] rounded-lg text-center py-4 mb-5 tablet:items-start tablet-xl:pl-20 tablet:pl-10'>
+        <div className='tablet:flex gap-5'>
+
+          <div className="tablet:flex tablet:flex-col tablet:border-r-2 tablet-xl:pr-10 tablet:pr-2 justify-end items-start">
+            <p className='font-bold text-2xl '>$89,914</p>
+            <p className='text-xs text-Dark-gray'>of $100,000 backed</p>
           </div>
+          <hr className='w-16 border-1 mt-2.5 tablet:hidden ml-6 border-[.1rem]' />
+          <div className="tablet:flex tablet:flex-col tablet:border-r-2 tablet-xl:pr-20 tablet-xl:pl-10 tablet:pr-5 tablet:pl-3 justify-end items-start">
+            <p className='font-bold text-2xl mt-2'>5,007</p>
+            <p className='text-xs text-Dark-gray'>total backers</p>
+          </div>
+          <hr className='w-16 border-1 mt-2.5 tablet:hidden ml-6 border-[.1rem]'/>
+          <div className="tablet:flex tablet:flex-col tablet:pl-5 items-start">
+            <p className='font-bold text-2xl mt-2'>56</p>
+            <p className='text-xs text-Dark-gray'>days left</p>
+          </div>
+        </div>
+        <div className='w-[90%] bg-gray-300 h-3 rounded-full mt-5 mb-3'>
+            <div className='bg-Moderate-cyan h-3 leading-normal rounded-full px-[.2rem]' style={{width : percentFinished }} ></div>
+        </div>
         </div>
         <div className='bg-white border-[.5px] rounded-lg py-4'>
           <div className='w-[90%] mx-auto'>

@@ -7,6 +7,8 @@ module.exports = {
   theme: {
     screens: {
       'tablet': '750px',
+      'tablet-lg': '1090px',
+      'tablet-xl':'1100px',
     },
     extend: {
       fontFamily: {
