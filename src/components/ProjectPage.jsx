@@ -3,12 +3,12 @@ import PledgeCard from './PledgeCard';
 import ProjectInfo from './ProjectInfo';
 
 
-export default function ProjectPage() {
+export default function ProjectPage(props) {
 const percentFinished = 89914 / 100000 * 100 + '%';
 
   return (
     <main className = " relative -top-16 mx-auto my-0 w-[90%] -z-[5] tablet:w-[50%]">
-      <ProjectInfo />
+      <ProjectInfo handleSelectionClick={props.handleSelectionClick}/>
       <div className='flex flex-col bg-white items-center border-[.5px] rounded-lg text-center py-4 mb-5 tablet:items-start tablet-xl:pl-20 tablet:pl-10'>
         <div className='tablet:flex gap-5'>
 
