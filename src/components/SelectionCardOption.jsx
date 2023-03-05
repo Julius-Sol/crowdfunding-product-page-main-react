@@ -21,7 +21,6 @@ export default function SelectionCardOption(props) {
 
     props.handleSelectionClick();
   }
-  console.log(formData.reward)
 
   return (
     <section>
@@ -55,7 +54,7 @@ export default function SelectionCardOption(props) {
                     <span className=' text-gray-600 opacity-75 relative left-8'>$</span>
                     <input type="text" className='w-[6.4rem] border-2 rounded-full p-2 text-center' name="pledgeAmount" value={formData.pledgeAmount} onChange={handleChange}/>
                   </div>
-                  <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan'>Continue</button>
+                  <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan' onClick={props.showCompleteModal}>Continue</button>
                 </div>
               </div> : ""}
             </div>
@@ -89,7 +88,7 @@ export default function SelectionCardOption(props) {
                     <span className=' text-gray-600 opacity-75 relative left-8'>$</span>
                     <input type="text" className='w-[6.4rem] border-2 rounded-full p-2 text-center' name="pledgeAmount" value={formData.pledgeAmount} onChange={handleChange}/>
                   </div>
-                  <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan'>Continue</button>
+                  <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan' onClick={props.showCompleteModal}>Continue</button>
                 </div>
               </div>:""}
             </div>
@@ -123,7 +122,7 @@ export default function SelectionCardOption(props) {
                     <span className=' text-gray-600 opacity-75 relative left-8'>$</span>
                     <input type="text" className='w-[6.4rem] border-2 rounded-full p-2 text-center' name="pledgeAmount" value={formData.pledgeAmount} onChange={handleChange}/>
                   </div>
-                  <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan'>Continue</button>
+                  <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan' onClick={props.showCompleteModal}>Continue</button>
                 </div>
               </div>:""}
             </div>
@@ -157,7 +156,7 @@ export default function SelectionCardOption(props) {
                     <span className=' text-gray-600 opacity-75 relative left-8'>$</span>
                     <input type="text" className='w-[6.4rem] border-2 rounded-full p-2 text-center' name='pledgeAmount' value={formData.pledgeAmount} onChange={handleChange}/>
                   </div>
-                  <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan'>Continue</button>
+                  <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan' onClick={props.showCompleteModal}>Continue</button>
                 </div>
               </div>:""}
             </div>

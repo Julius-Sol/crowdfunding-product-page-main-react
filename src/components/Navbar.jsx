@@ -10,7 +10,6 @@ const [openNavMenu, setOpenNavMenu] = useState(true);
 const openMenu = () => {
   setOpenNavMenu((prevOpenNav)=>!prevOpenNav)
 }
-console.log(openNavMenu)
 
   return (
     <nav role="navigation" className='absolute flex flex-col tablet:flex-row tablet:justify-between tablet:w-screen tablet:items-center tablet:px-24 tablet:py-10'>

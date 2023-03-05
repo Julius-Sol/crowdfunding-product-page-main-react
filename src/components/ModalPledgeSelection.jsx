@@ -10,7 +10,7 @@ function ModalPledgeSelection(props) {
           <div className="h-[15px] w-[14px] contrast-0 bg-[url('./assets/icon-close-menu.svg')] hover:cursor-pointer" onClick={props.handleSelectionClick}></div>
         </div>
         <p className='text-xs text-Dark-gray mb-5'>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
-        <SelectionCardOption handleSelectionClick={props.handleSelectionClick}/>
+        <SelectionCardOption handleSelectionClick={props.handleSelectionClick} showCompleteModal={props.showCompleteModal}/>
 
 
       </div>

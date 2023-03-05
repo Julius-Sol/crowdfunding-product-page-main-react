@@ -26,13 +26,14 @@ function App() {
     setCompleteShow(false)
   }
 
+  console.log(selectionShow , completeShow)
 
 
   return (
     <div className='absolute font-commissioner text-base -z-50 '>
-      <Complete showCompleteModal={showCompleteModal} handleCompleteClick={hideCompleteModal} hideModal={hideSelectionModal} showComplete={completeShow}/>
-      <ModalPledgeSelection handleSelectionClick={hideSelectionModal} showModal={selectionShow}/>
-      <div className={`${selectionShow ? 'relative z-100 bg-[rgba(0,0,0,0.5)]' : 'relative -z-40 bg-[rgba(0,0,0,0.0)'}`}>
+      <Complete handleCompleteClick={hideCompleteModal} hideModal={hideSelectionModal} showComplete={completeShow}/>
+      <ModalPledgeSelection handleSelectionClick={hideSelectionModal} showModal={selectionShow} showCompleteModal={showCompleteModal}/>
+      <div className={`${selectionShow || completeShow ? 'relative z-100 bg-[rgba(0,0,0,0.5)]' : 'relative -z-40 bg-[rgba(0,0,0,0.0)'}`}>
         <Navbar /> 
         <div className="inline-block bg-gradient-to-b from-black -z-10">
           <img src={heroMobile} srcSet={`${heroMobile} 750w, ${heroDesktop} 1444w`} alt="mac desktop background image" className='relative -z-20 w-screen' />
