@@ -16,12 +16,17 @@ export default function SelectionCardOption(props) {
     })
   }
 
+  function handleSubmit(event){
+    event.preventDefault()
+
+    props.handleSelectionClick();
+  }
   console.log(formData.reward)
 
   return (
     <section>
       <div className='flex items-center gap-3'>
-        <form action="" className=''>
+        <form onSubmit={handleSubmit} className=''>
 
           {/* No-rewards */}
           <div className='border-2 px-2 py-5 mb-5'>
@@ -42,7 +47,7 @@ export default function SelectionCardOption(props) {
                 </div>
               </label>
               <p className='text-xs text-Dark-gray mt-5 mb-3'>Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p>
-              <div>
+              {formData.reward === "no-reward"?<div>
                 <hr />
                 <p className='text-center p-6 text-Dark-gray text-sm font-bold'>Enter your pledge</p>
                 <div className='flex gap-5 items-center'>
@@ -52,7 +57,7 @@ export default function SelectionCardOption(props) {
                   </div>
                   <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan'>Continue</button>
                 </div>
-              </div>
+              </div> : ""}
             </div>
 
             {/* Bamboo*/}
@@ -76,7 +81,7 @@ export default function SelectionCardOption(props) {
               </label>
               <p className='text-xs text-Dark-gray mt-5 mb-3'>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you'll be added to a special Backer member list.</p>
               <p className='text-base font-bold mb-5'>101<span className='relative text-base text-Dark-gray -top-.8 left-1'>left</span></p>
-              <div>
+              {formData.reward === "Bamboo"?<div>
                 <hr />
                 <p className='text-center p-6 text-Dark-gray text-sm font-bold'>Enter your pledge</p>
                 <div className='flex gap-5 items-center'>
@@ -86,7 +91,7 @@ export default function SelectionCardOption(props) {
                   </div>
                   <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan'>Continue</button>
                 </div>
-              </div>
+              </div>:""}
             </div>
 
             {/* Black Edition*/}
@@ -110,7 +115,7 @@ export default function SelectionCardOption(props) {
               </label>
               <p className='text-xs text-Dark-gray mt-5 mb-3'>You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included.</p>
               <p className='text-base font-bold mb-5'>64<span className='relative text-base text-Dark-gray -top-.8 left-1'>left</span></p>
-              <div>
+              {formData.reward === "Black"?<div>
                 <hr />
                 <p className='text-center p-6 text-Dark-gray text-sm font-bold'>Enter your pledge</p>
                 <div className='flex gap-5 items-center'>
@@ -120,7 +125,7 @@ export default function SelectionCardOption(props) {
                   </div>
                   <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan'>Continue</button>
                 </div>
-              </div>
+              </div>:""}
             </div>
 
             {/* Mahogany*/}
@@ -144,7 +149,7 @@ export default function SelectionCardOption(props) {
               </label>
               <p className='text-xs text-Dark-gray mt-5 mb-3'>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included.</p>
               <p className='text-base font-bold mb-5'>0<span className='relative text-base text-Dark-gray -top-.8 left-1'>left</span></p>
-              <div>
+              {formData.reward === "Mahogany"?<div>
                 <hr />
                 <p className='text-center p-6 text-Dark-gray text-sm font-bold'>Enter your pledge</p>
                 <div className='flex gap-5 items-center'>
@@ -154,7 +159,7 @@ export default function SelectionCardOption(props) {
                   </div>
                   <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan'>Continue</button>
                 </div>
-              </div>
+              </div>:""}
             </div>
         </form>
       </div>
