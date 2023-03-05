@@ -11,7 +11,7 @@ export default function PledgeCard(props) {
         <p className='text-sm text-Dark-gray mb-5'>{description}</p>
         <div className='tablet:flex tablet:w-full justify-between'>
           <p className='text-3xl font-bold mb-5'>{numberLeft}<span className='relative text-sm text-Dark-gray -top-1.5 left-1'>left</span></p>
-          {numberLeft? <button className='bg-Moderate-cyan hover:bg-Dark-cyan rounded-full px-7 py-3 text-white text-sm font-bold'>Select Reward</button> : <button className='bg-Dark-gray hover:cursor-default rounded-full px-7 py-3 text-white text-sm font-bold'>Out of Stock</button> }
+          {numberLeft? <button className='bg-Moderate-cyan hover:bg-Dark-cyan rounded-full px-7 py-3 text-white text-sm font-bold' onClick={props.handleSelectionClick}>Select Reward</button> : <button className='bg-Dark-gray hover:cursor-default rounded-full px-7 py-3 text-white text-sm font-bold'>Out of Stock</button> }
         </div>
       </div>
     </div>

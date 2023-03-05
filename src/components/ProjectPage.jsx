@@ -38,9 +38,9 @@ const percentFinished = 89914 / 100000 * 100 + '%';
             </p>
             <p className='text-sm text-Dark-gray mb-5'>Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer to allow notepads, pens, and USB sticks to be stored under the stand.
             </p>
-            <PledgeCard title="Bamboo Stand" subTitle="Pledge $25 or more" description="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you'll be added to a special Backer member list." numberLeft={101}/>
-            <PledgeCard title="Black Edition Stand" subTitle="Pledge $75 or more" description="You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included." numberLeft={64}/>
-            <PledgeCard title="Mahogany Special Edition" subTitle="Pledge $200 or more" description="You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included." numberLeft={0}/>
+            <PledgeCard title="Bamboo Stand" subTitle="Pledge $25 or more" description="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you'll be added to a special Backer member list." numberLeft={101} handleSelectionClick={props.handleSelectionClick}/>
+            <PledgeCard title="Black Edition Stand" subTitle="Pledge $75 or more" description="You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included." numberLeft={64} handleSelectionClick={props.handleSelectionClick}/>
+            <PledgeCard title="Mahogany Special Edition" subTitle="Pledge $200 or more" description="You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included." numberLeft={0} handleSelectionClick={props.handleSelectionClick}/>
           </div>
         </div>
     </main>
