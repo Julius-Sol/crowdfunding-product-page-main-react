@@ -28,7 +28,7 @@ export default function SelectionCardOption(props) {
         <form onSubmit={handleSubmit} className=''>
 
           {/* No-rewards */}
-          <div className='border-2 px-2 py-5 mb-5'>
+          <div className={`border-2 px-2 py-5 mb-5 rounded-lg ${formData.reward === "no-reward"? "border-Moderate-cyan": ""}`}>
             <input className='hidden'
                       type="radio"
                       id="no-reward"
@@ -37,7 +37,7 @@ export default function SelectionCardOption(props) {
                       checked={formData.reward === "no-reward"}
                       onChange={handleChange}
                   />
-              <label htmlFor="no-reward" className='flex items-center gap-2'>
+              <label htmlFor="no-reward" className='flex items-center gap-2 hover:cursor-pointer hover:text-Moderate-cyan'>
                 <div className='flex h-5 w-5 border-[.1rem] rounded-full justify-center items-center'>
                   {formData.reward === "no-reward"?<div className='h-2 w-2 bg-Moderate-cyan rounded-full'></div> : ""}
                 </div>
@@ -46,13 +46,14 @@ export default function SelectionCardOption(props) {
                 </div>
               </label>
               <p className='text-xs text-Dark-gray mt-5 mb-3'>Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p>
-              {formData.reward === "no-reward"?<div>
-                <hr />
+              <hr />
+              {formData.reward === "no-reward"?<div className='tablet:flex tablet:justify-between tablet:pt-3'>
+                
                 <p className='text-center p-6 text-Dark-gray text-sm font-bold'>Enter your pledge</p>
-                <div className='flex gap-5 items-center'>
+                <div className='flex gap-5 items-center tablet:pr-6 '>
                   <div className='flex items-center'>
-                    <span className=' text-gray-600 opacity-75 relative left-8'>$</span>
-                    <input type="text" className='w-[6.4rem] border-2 rounded-full p-2 text-center' name="pledgeAmount" value={formData.pledgeAmount} onChange={handleChange}/>
+                    <label htmlFor='no-reward' className=' text-gray-600 opacity-75 relative left-8'>$</label>
+                    <input type="text" className='w-[6.4rem] border-2 rounded-full p-2 text-center focus:border-Moderate-cyan outline-none hover:cursor-pointer' name="pledgeAmount" id="no-reward" value={formData.pledgeAmount} onChange={handleChange}/>
                   </div>
                   <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan' onClick={props.showCompleteModal}>Continue</button>
                 </div>
@@ -60,7 +61,7 @@ export default function SelectionCardOption(props) {
             </div>
 
             {/* Bamboo*/}
-            <div className='border-2 px-2 py-5 mb-5'>
+            <div className={`border-2 px-2 py-5 mb-5 rounded-lg ${formData.reward === "Bamboo"? "border-Moderate-cyan": ""}`}>
             <input className='hidden'
                       type="radio"
                       id="Bamboo"
@@ -69,7 +70,7 @@ export default function SelectionCardOption(props) {
                       checked={formData.reward === "Bamboo"}
                       onChange={handleChange}
                   />
-              <label htmlFor="Bamboo" className='flex items-center gap-2'>
+              <label htmlFor="Bamboo" className='flex items-center gap-2 hover:cursor-pointer hover:text-Moderate-cyan'>
                 <div className='flex h-5 w-5 border-[.1rem] rounded-full justify-center items-center'>
                   {formData.reward === "Bamboo"?<div className='h-2 w-2 bg-Moderate-cyan rounded-full'></div> : ""}
                 </div>
@@ -79,14 +80,15 @@ export default function SelectionCardOption(props) {
                 </div>
               </label>
               <p className='text-xs text-Dark-gray mt-5 mb-3'>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you'll be added to a special Backer member list.</p>
-              <p className='text-base font-bold mb-5'>101<span className='relative text-base text-Dark-gray -top-.8 left-1'>left</span></p>
-              {formData.reward === "Bamboo"?<div>
-                <hr />
+              <p className='text-base font-bold mb-5 tablet:relative tablet:left-[90%] tablet:-top-[6rem] '>101<span className='relative text-base text-Dark-gray -top-.8 left-1'>left</span></p>
+              <hr />
+              {formData.reward === "Bamboo"?<div className='tablet:flex tablet:justify-between tablet:pt-3'>
+                
                 <p className='text-center p-6 text-Dark-gray text-sm font-bold'>Enter your pledge</p>
                 <div className='flex gap-5 items-center'>
                   <div className='flex items-center'>
-                    <span className=' text-gray-600 opacity-75 relative left-8'>$</span>
-                    <input type="text" className='w-[6.4rem] border-2 rounded-full p-2 text-center' name="pledgeAmount" value={formData.pledgeAmount} onChange={handleChange}/>
+                    <label htmlFor='bamboo'className=' text-gray-600 opacity-75 relative left-8 hover:cursor-pointer'>$</label>
+                    <input type="text" className='w-[6.4rem] border-2 rounded-full p-2 text-center focus:border-Moderate-cyan outline-none hover:cursor-pointer' id='bamboo' name="pledgeAmount" value={formData.pledgeAmount} onChange={handleChange}/>
                   </div>
                   <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan' onClick={props.showCompleteModal}>Continue</button>
                 </div>
@@ -94,7 +96,7 @@ export default function SelectionCardOption(props) {
             </div>
 
             {/* Black Edition*/}
-            <div className='border-2 px-2 py-5 mb-5'>
+            <div className={`border-2 px-2 py-5 mb-5 rounded-lg ${formData.reward === "Black"? "border-Moderate-cyan": ""}`}>
             <input className='hidden'
                       type="radio"
                       id="Black"
@@ -103,7 +105,7 @@ export default function SelectionCardOption(props) {
                       checked={formData.reward === "Black"}
                       onChange={handleChange}
                   />
-              <label htmlFor="Black" className='flex items-center gap-2'>
+              <label htmlFor="Black" className='flex items-center gap-2 hover:cursor-pointer hover:text-Moderate-cyan'>
                 <div className='flex h-5 w-5 border-[.1rem] rounded-full justify-center items-center'>
                   {formData.reward === "Black"?<div className='h-2 w-2 bg-Moderate-cyan rounded-full'></div> : ""}
                 </div>
@@ -113,14 +115,15 @@ export default function SelectionCardOption(props) {
                 </div>
               </label>
               <p className='text-xs text-Dark-gray mt-5 mb-3'>You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included.</p>
-              <p className='text-base font-bold mb-5'>64<span className='relative text-base text-Dark-gray -top-.8 left-1'>left</span></p>
-              {formData.reward === "Black"?<div>
-                <hr />
+              <p className='text-base font-bold mb-5 tablet:relative tablet:left-[90%] tablet:-top-[6rem]'>64<span className='relative text-base text-Dark-gray -top-.8 left-1'>left</span></p>
+              <hr />
+              {formData.reward === "Black"?<div className='tablet:flex tablet:justify-between tablet:pt-3'>
+                
                 <p className='text-center p-6 text-Dark-gray text-sm font-bold'>Enter your pledge</p>
                 <div className='flex gap-5 items-center'>
                   <div className='flex items-center'>
-                    <span className=' text-gray-600 opacity-75 relative left-8'>$</span>
-                    <input type="text" className='w-[6.4rem] border-2 rounded-full p-2 text-center' name="pledgeAmount" value={formData.pledgeAmount} onChange={handleChange}/>
+                    <label htmlFor="black"className=' text-gray-600 opacity-75 relative left-8 hover:cursor-pointer'>$</label>
+                    <input type="text" className='w-[6.4rem] border-2 rounded-full p-2 text-center focus:border-Moderate-cyan outline-none hover:cursor-pointer' id="black" name="pledgeAmount" value={formData.pledgeAmount} onChange={handleChange}/>
                   </div>
                   <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan' onClick={props.showCompleteModal}>Continue</button>
                 </div>
@@ -128,7 +131,7 @@ export default function SelectionCardOption(props) {
             </div>
 
             {/* Mahogany*/}
-            <div className={`border-2 px-2 py-5 mb-5 ${info.Mahogony.numberLeft? "": "opacity-40 pointer-events-none"}`}>
+            <div className={`border-2 px-2 py-5 mb-5 rounded-lg ${info.Mahogony.numberLeft? "": "opacity-40 pointer-events-none"}`}>
             <input className='hidden'
                       type="radio"
                       id="Mahogany"
@@ -137,7 +140,7 @@ export default function SelectionCardOption(props) {
                       checked={formData.reward === "Mahogany"}
                       onChange={handleChange}
                   />
-              <label htmlFor="Mahogany" className='flex items-center gap-2'>
+              <label htmlFor="Mahogany" className='flex items-center gap-2 hover:cursor-pointer hover:text-Moderate-cyan'>
                 <div className='flex h-5 w-5 border-[.1rem] rounded-full justify-center items-center'>
                   {formData.reward === "Mahogany"?<div className='h-2 w-2 bg-Moderate-cyan rounded-full'></div> : ""}
                 </div>
@@ -147,14 +150,15 @@ export default function SelectionCardOption(props) {
                 </div>
               </label>
               <p className='text-xs text-Dark-gray mt-5 mb-3'>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included.</p>
-              <p className='text-base font-bold mb-5'>0<span className='relative text-base text-Dark-gray -top-.8 left-1'>left</span></p>
-              {formData.reward === "Mahogany"?<div>
-                <hr />
+              <p className='text-base font-bold mb-5 tablet:relative tablet:left-[90%] tablet:-top-[6rem]'>0<span className='relative text-base text-Dark-gray -top-.8 left-1'>left</span></p>
+              <hr />
+              {formData.reward === "Mahogany"?<div className='tablet:flex tablet:justify-between tablet:pt-3'>
+                
                 <p className='text-center p-6 text-Dark-gray text-sm font-bold'>Enter your pledge</p>
                 <div className='flex gap-5 items-center'>
                   <div className='flex items-center'>
                     <span className=' text-gray-600 opacity-75 relative left-8'>$</span>
-                    <input type="text" className='w-[6.4rem] border-2 rounded-full p-2 text-center' name='pledgeAmount' value={formData.pledgeAmount} onChange={handleChange}/>
+                    <input type="text" className='w-[6.4rem] border-2 rounded-full p-2 text-center focus:border-Moderate-cyan outline-none' name='pledgeAmount' value={formData.pledgeAmount} onChange={handleChange}/>
                   </div>
                   <button className=' bg-Moderate-cyan rounded-full py-2 px-6 text-white font-bold hover:bg-Dark-cyan' onClick={props.showCompleteModal}>Continue</button>
                 </div>
