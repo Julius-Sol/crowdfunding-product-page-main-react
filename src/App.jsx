@@ -26,9 +26,6 @@ function App() {
     setCompleteShow(false)
   }
 
-  console.log(selectionShow , completeShow)
-
-
   return (
     <div className='absolute font-commissioner text-base -z-50 '>
       <Complete handleCompleteClick={hideCompleteModal} hideModal={hideSelectionModal} showComplete={completeShow}/>
